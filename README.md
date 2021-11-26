@@ -74,3 +74,9 @@ Following CRUD operations supported
     - Click **Collections** in the left navigation in Postman.
     - Navigate to `MDB-Data-API` 
     - You are all setup and can now start requesting the available resources with the Atlas Data API
+
+**NOTE**: Please keep in mind that the source of truth for the API resources are found in the official [documentation](https://docs.atlas.mongodb.com/api/data-api-resources/) which could change at any given time.
+
+# Contributors
+
+Feel free to make pull requests to update the project with new API resources, fixes, and enhancements.
