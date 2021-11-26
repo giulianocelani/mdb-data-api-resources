@@ -1,0 +1,410 @@
+{
+    "info": {
+        "_postman_id": "c4d120e8-ab65-4e6b-8e2e-ab341bbfca49",
+        "name": "MDB-Data-API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "findOne",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"filter\": {},\n  \"projection\": {}\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/{{DATA_API_APP_ID}}/endpoint/data/{{API_VERSION}}/action/findOne",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "{{DATA_API_APP_ID}}",
+                        "endpoint",
+                        "data",
+                        "{{API_VERSION}}",
+                        "action",
+                        "findOne"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "find",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"filter\": {},\n  \"projection\": {}\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/{{DATA_API_APP_ID}}/endpoint/data/{{API_VERSION}}/action/find",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "{{DATA_API_APP_ID}}",
+                        "endpoint",
+                        "data",
+                        "{{API_VERSION}}",
+                        "action",
+                        "find"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "insertOne",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"document\": {\n      \"test\": \"X\"\n  }\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/{{DATA_API_APP_ID}}/endpoint/data/{{API_VERSION}}/action/insertOne",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "{{DATA_API_APP_ID}}",
+                        "endpoint",
+                        "data",
+                        "{{API_VERSION}}",
+                        "action",
+                        "insertOne"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "insertMany",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"documents\": [\n      {\n          \"test\": \"X\"\n      },\n      {\n          \"test\": \"X\"\n      }\n  ]\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/{{DATA_API_APP_ID}}/endpoint/data/{{API_VERSION}}/action/insertMany",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "{{DATA_API_APP_ID}}",
+                        "endpoint",
+                        "data",
+                        "{{API_VERSION}}",
+                        "action",
+                        "insertMany"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "updateOne",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"filter\": {\n      \"test\": \"X\"\n  },\n  \"update\": {\n      \"$set\": {\n          \"test\": \"XX\"\n      }\n  },\n  \"upsert\": true\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/{{DATA_API_APP_ID}}/endpoint/data/{{API_VERSION}}/action/updateOne",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "{{DATA_API_APP_ID}}",
+                        "endpoint",
+                        "data",
+                        "{{API_VERSION}}",
+                        "action",
+                        "updateOne"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "updateMany",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"filter\": {\n      \"test\": \"X\"\n  },\n  \"update\": {\n      \"$set\": {\n          \"test\": \"XX\"\n      }\n  },\n  \"upsert\": false\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/{{DATA_API_APP_ID}}/endpoint/data/{{API_VERSION}}/action/updateMany",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "{{DATA_API_APP_ID}}",
+                        "endpoint",
+                        "data",
+                        "{{API_VERSION}}",
+                        "action",
+                        "updateMany"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "replaceOne",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"filter\": {\n      \"test\": \"X\"\n  },\n  \"replacement\": {\n      \"test\": \"XXX\"\n  },\n  \"upsert\": false\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/{{DATA_API_APP_ID}}/endpoint/data/{{API_VERSION}}/action/replaceOne",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "{{DATA_API_APP_ID}}",
+                        "endpoint",
+                        "data",
+                        "{{API_VERSION}}",
+                        "action",
+                        "replaceOne"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "deleteOne",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"filter\": {\n      \"test\": \"XX\"\n  }\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/{{DATA_API_APP_ID}}/endpoint/data/{{API_VERSION}}/action/deleteOne",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "{{DATA_API_APP_ID}}",
+                        "endpoint",
+                        "data",
+                        "{{API_VERSION}}",
+                        "action",
+                        "deleteOne"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "deleteMany",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"filter\": {\n      \"test\": \"XX\"\n  }\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/action/deleteMany",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "action",
+                        "deleteMany"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "aggregate",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                    },
+                    {
+                        "key": "Access-Control-Request-Headers",
+                        "value": "*",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"dataSource\": \"{{CLUSTER_NAME}}\",\n  \"database\": \"{{DATABASE}}\",\n  \"collection\": \"{{COLLECTION}}\",\n  \"pipeline\": [\n      {\n          \"$match\": {\n              \"test\": {\n                  \"$exists\": true\n              }\n          }\n      },\n      {\n          \"$group\": {\n              \"_id\": \"$test\",\n              \"count\": {\n                  \"$sum\": 1\n              }\n          }\n      }\n  ]\n}"
+                },
+                "url": {
+                    "raw": "{{BASE_URL}}/{{DATA_API_APP_ID}}/endpoint/data/{{API_VERSION}}/action/aggregate",
+                    "host": [
+                        "{{BASE_URL}}"
+                    ],
+                    "path": [
+                        "{{DATA_API_APP_ID}}",
+                        "endpoint",
+                        "data",
+                        "{{API_VERSION}}",
+                        "action",
+                        "aggregate"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "auth": {
+        "type": "apikey",
+        "apikey": [
+            {
+                "key": "value",
+                "value": "{{API_KEY}}",
+                "type": "string"
+            },
+            {
+                "key": "key",
+                "value": "api-key",
+                "type": "string"
+            }
+        ]
+    },
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "exec": [
+                    ""
+                ]
+            }
+        }
+    ]
+}
